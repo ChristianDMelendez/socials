@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Locked OBS Banner</title>
+  <meta charset="UTF-8">
+  <title>SociSalsa Banner</title>
   <style>
     html, body {
-      width: 1920px;
-      height: 30px;
       margin: 0;
       padding: 0;
-      background: transparent;
+      width: 1920px;
+      height: 30px;
       overflow: hidden;
-    }
-
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background: transparent;
     }
 
     .banner-wrapper {
@@ -24,9 +18,12 @@
       height: 30px;
       overflow: hidden;
       background: transparent;
-      border: 2px solid #ff1e56;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #ff1e56, 0 0 30px #ff1e56;
+      border: 1px solid #ff0040;
+      border-radius: 6px;
+      box-shadow: 
+        0 0 6px #ff0040,
+        0 0 12px #ff0040,
+        inset 0 0 4px #ff0040;
       animation: lightning 2s infinite;
     }
 
@@ -34,35 +31,31 @@
       display: inline-block;
       white-space: nowrap;
       font-family: 'Segoe UI', sans-serif;
-      font-size: 18px;
-      font-weight: bold;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 30px;
       color: #ffffff;
       text-shadow:
-        0 0 2px #fff,
-        0 0 5px #0ff,
-        0 0 10px #00f,
-        0 0 20px #f0f;
+        0 0 2px #ffffff,
+        0 0 4px #ff0080,
+        0 0 8px #00ffff;
       padding-left: 100%;
-      animation: scroll-left 20s linear infinite;
+      animation: scroll-left 25s linear infinite;
     }
 
     @keyframes scroll-left {
-      from {
-        transform: translateX(-100%);
-      }
-      to {
-        transform: translateX(100%);
-      }
+      0%   { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
     }
 
     @keyframes lightning {
-      0%, 20%, 22%, 24%, 100% {
+      0%, 18%, 20%, 22%, 100% {
         opacity: 1;
         filter: brightness(1);
       }
-      21%, 23% {
-        opacity: 0.8;
-        filter: brightness(2.5);
+      19%, 21% {
+        opacity: 0.85;
+        filter: brightness(2.2);
       }
     }
   </style>
