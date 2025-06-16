@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lightning Scrolling Banner</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    .banner-wrapper {
+      position: relative;
+      width: 100vw;
+      height: 60px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.75);
+      border: 3px solid #ff1e56;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #ff1e56, 0 0 60px #ff1e56;
+    }
+
+    .banner-content {
+      display: inline-block;
+      white-space: nowrap;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 28px;
+      font-weight: bold;
+      color: #ffffff;
+      text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 40px #00f,
+        0 0 80px #00f,
+        0 0 160px #f0f;
+      padding-left: 100%;
+      animation: scroll-left 20s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(100%);
+      }
+    }
+
+    /* LIGHTNING EFFECT */
+    @keyframes lightning {
+      0%, 20%, 22%, 24%, 100% {
+        opacity: 1;
+        filter: brightness(1);
+      }
+      21%, 23% {
+        opacity: 0.8;
+        filter: brightness(3);
+      }
+    }
+
+    .banner-wrapper {
+      animation: lightning 2s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner-wrapper">
+    <div class="banner-content">
+      CashApp: $ChrisMelendez2298 &nbsp;&nbsp;&nbsp; Instagram: @jcm_silent &nbsp;&nbsp;&nbsp; Follow & Subscribe for more content!
+    </div>
+  </div>
+</body>
+</html>
