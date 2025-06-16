@@ -2,15 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>SociSalsa Banner</title>
+  <title>Locked OBS Banner</title>
   <style>
     html, body {
-      margin: 0;
-      padding: 0;
       width: 1920px;
       height: 30px;
-      overflow: hidden;
+      margin: 0;
+      padding: 0;
       background: transparent;
+      overflow: hidden;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .banner-wrapper {
@@ -41,8 +47,12 @@
     }
 
     @keyframes scroll-left {
-      0%   { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(100%);
+      }
     }
 
     @keyframes lightning {
