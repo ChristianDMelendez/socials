@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Lightning Scrolling Banner</title>
+  <title>SociSalsa Banner</title>
   <style>
     html, body {
       margin: 0;
@@ -12,14 +12,17 @@
     }
 
     .banner-wrapper {
-      position: relative;
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100vw;
       height: 60px;
       overflow: hidden;
-      background: rgba(0, 0, 0, 0.75);
+      background: transparent;
       border: 3px solid #ff1e56;
       border-radius: 10px;
       box-shadow: 0 0 20px #ff1e56, 0 0 60px #ff1e56;
+      animation: lightning 2s infinite;
     }
 
     .banner-content {
@@ -49,7 +52,6 @@
       }
     }
 
-    /* LIGHTNING EFFECT */
     @keyframes lightning {
       0%, 20%, 22%, 24%, 100% {
         opacity: 1;
@@ -59,10 +61,6 @@
         opacity: 0.8;
         filter: brightness(3);
       }
-    }
-
-    .banner-wrapper {
-      animation: lightning 2s infinite;
     }
   </style>
 </head>
