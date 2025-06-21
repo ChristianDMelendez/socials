@@ -8,7 +8,7 @@
       margin: 0;
       padding: 0;
       width: 1920px;
-      height: 120px; /* Added more space for full view */
+      height: 120px;
       overflow: hidden;
       background: transparent;
       font-family: 'Segoe UI', sans-serif;
@@ -16,7 +16,7 @@
 
     .banner-wrapper {
       width: 1920px;
-      height: 45px; /* FIXED: was 30px */
+      height: 45px;
       overflow: hidden;
       background: transparent;
       border: 1px solid #ff0040;
@@ -30,20 +30,26 @@
       margin-top: 10px;
     }
 
-    .banner-content {
-      position: absolute;
+    .banner-track {
+      display: inline-block;
       white-space: nowrap;
-      font-size: 18px; /* Slightly larger if you want */
+      position: absolute;
+      animation: scroll-left 40s linear infinite;
+      will-change: transform;
+    }
+
+    .banner-content {
+      display: inline-block;
+      font-size: 18px;
       font-weight: 600;
-      line-height: 45px; /* Matches wrapper height now */
+      line-height: 45px;
       color: #ffffff;
       text-shadow:
         0 0 2px #ffffff,
         0 0 4px #ff0080,
         0 0 8px #00ffff;
-      animation: scroll-right 40s linear infinite;
-      will-change: transform;
       padding-left: 10px;
+      padding-right: 50px; /* Add breathing room to the right */
     }
 
     .goto-button {
@@ -73,9 +79,9 @@
         0 0 24px #ff0040;
     }
 
-    @keyframes scroll-right {
-      0%   { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
+    @keyframes scroll-left {
+      0%   { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
     }
 
     @keyframes lightning {
@@ -92,8 +98,10 @@
 </head>
 <body>
   <div class="banner-wrapper">
-    <div class="banner-content">
-     Donate Here – CashApp: $ChrisMelendez2298 &nbsp;&nbsp;&nbsp; Follow me on Instagram: @jcm_silent &nbsp;&nbsp;&nbsp; Follow me on Twitch for more content!
+    <div class="banner-track">
+      <div class="banner-content">
+        Donate Here – CashApp: $ChrisMelendez2298 &nbsp;&nbsp;&nbsp; Follow me on Instagram: @jcm_silent &nbsp;&nbsp;&nbsp; Follow me on Twitch for more content!
+      </div>
     </div>
   </div>
 
