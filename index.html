@@ -8,9 +8,10 @@
       margin: 0;
       padding: 0;
       width: 1920px;
-      height: 30px;
+      height: 100px; /* Increased height to fit button below */
       overflow: hidden;
       background: transparent;
+      font-family: 'Segoe UI', sans-serif;
     }
 
     .banner-wrapper {
@@ -26,12 +27,12 @@
         inset 0 0 4px #ff0040;
       animation: lightning 2s infinite;
       position: relative;
+      margin-top: 10px;
     }
 
     .banner-content {
       position: absolute;
       white-space: nowrap;
-      font-family: 'Segoe UI', sans-serif;
       font-size: 16px;
       font-weight: 600;
       line-height: 30px;
@@ -42,6 +43,34 @@
         0 0 8px #00ffff;
       animation: scroll-right 40s linear infinite;
       will-change: transform;
+      padding-left: 10px;
+    }
+
+    .goto-button {
+      display: block;
+      margin: 20px auto 0 auto;
+      width: fit-content;
+      font-size: 16px;
+      padding: 8px 24px;
+      background-color: #0d0d0d;
+      color: #ffffff;
+      border: 2px solid #ff0040;
+      border-radius: 8px;
+      text-decoration: none;
+      text-shadow: 0 0 4px #ff0040;
+      box-shadow:
+        0 0 8px #ff0040,
+        inset 0 0 5px #ff0040;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .goto-button:hover {
+      background-color: #ff0040;
+      color: #0d0d0d;
+      text-shadow: none;
+      box-shadow:
+        0 0 12px #ff0040,
+        0 0 24px #ff0040;
     }
 
     @keyframes scroll-right {
@@ -67,5 +96,7 @@
       CashApp: $ChrisMelendez2298 &nbsp;&nbsp;&nbsp; Instagram: @jcm_silent &nbsp;&nbsp;&nbsp; Follow for more content!
     </div>
   </div>
+
+  <a href="ingame.html" class="goto-button">Go to In-Game Overlay</a>
 </body>
 </html>
