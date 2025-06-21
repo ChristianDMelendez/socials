@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>JustCallMeSilentTTV Overlay - 1080p</title>
+  <title>JustCallMeSilentTTV Overlay</title>
 
+  <!-- Futuristic font -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -14,22 +15,8 @@
       height: 1080px;
       background: transparent;
       overflow: hidden;
-
-      /* Prevent scaling weirdness */
       transform: scale(1);
       transform-origin: top left;
-    }
-
-    .overlay-border {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 4px solid #ff0040;
-      border-radius: 12px;
-      box-shadow: 0 0 18px #ff0040, inset 0 0 8px #ff0040;
-      pointer-events: none;
     }
 
     .name-tag {
@@ -44,14 +31,13 @@
       border: 2px solid #ff0040;
       border-radius: 8px;
       background-color: rgba(0, 0, 0, 0.6);
-      text-shadow: 0 0 4px #fff, 0 0 8px #ff0040;
+      text-shadow: 0 0 4px #ffffff, 0 0 8px #ff0040;
       box-shadow: 0 0 10px #ff0040, inset 0 0 4px #ff0040;
       pointer-events: none;
     }
   </style>
 </head>
 <body>
-  <div class="overlay-border"></div>
   <div class="name-tag">JustCallMeSilentTTV</div>
 </body>
 </html>
