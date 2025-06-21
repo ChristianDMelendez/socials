@@ -8,9 +8,9 @@
       margin: 0;
       padding: 0;
       width: 1920px;
-      height: 120px;
-      overflow: hidden;
+      height: 60px;
       background: transparent;
+      overflow: hidden;
       font-family: 'Segoe UI', sans-serif;
     }
 
@@ -30,16 +30,9 @@
       margin-top: 10px;
     }
 
-    .banner-track {
-      display: inline-block;
-      white-space: nowrap;
-      position: absolute;
-      animation: scroll-left 40s linear infinite;
-      will-change: transform;
-    }
-
     .banner-content {
-      display: inline-block;
+      position: absolute;
+      white-space: nowrap;
       font-size: 18px;
       font-weight: 600;
       line-height: 45px;
@@ -48,40 +41,13 @@
         0 0 2px #ffffff,
         0 0 4px #ff0080,
         0 0 8px #00ffff;
-      padding-left: 10px;
-      padding-right: 50px; /* Add breathing room to the right */
+      left: 100%;
+      animation: scroll-once 40s linear forwards;
     }
 
-    .goto-button {
-      display: block;
-      margin: 20px auto 0 auto;
-      width: fit-content;
-      font-size: 16px;
-      padding: 8px 24px;
-      background-color: #0d0d0d;
-      color: #ffffff;
-      border: 2px solid #ff0040;
-      border-radius: 8px;
-      text-decoration: none;
-      text-shadow: 0 0 4px #ff0040;
-      box-shadow:
-        0 0 8px #ff0040,
-        inset 0 0 5px #ff0040;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .goto-button:hover {
-      background-color: #ff0040;
-      color: #0d0d0d;
-      text-shadow: none;
-      box-shadow:
-        0 0 12px #ff0040,
-        0 0 24px #ff0040;
-    }
-
-    @keyframes scroll-left {
-      0%   { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
+    @keyframes scroll-once {
+      0%   { left: 100%; }
+      100% { left: -100%; }
     }
 
     @keyframes lightning {
@@ -98,13 +64,9 @@
 </head>
 <body>
   <div class="banner-wrapper">
-    <div class="banner-track">
-      <div class="banner-content">
-        Donate Here – CashApp: $ChrisMelendez2298 &nbsp;&nbsp;&nbsp; Follow me on Instagram: @jcm_silent &nbsp;&nbsp;&nbsp; Follow me on Twitch for more content!
-      </div>
+    <div class="banner-content">
+      Donate Here – CashApp: $ChrisMelendez2298 &nbsp;&nbsp;&nbsp; Follow me on Instagram: @jcm_silent &nbsp;&nbsp;&nbsp; Follow me on Twitch for more content!
     </div>
   </div>
-
-  <a href="ingame.html" class="goto-button">Go to In-Game Overlay</a>
 </body>
 </html>
