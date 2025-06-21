@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Game Overlay - JustCallMeSilentTTV</title>
+  <title>JustCallMeSilentTTV In-Game Overlay</title>
 
-  <!-- Correct way to load Google Font -->
+  <!-- Futuristic font -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -13,49 +13,46 @@
       padding: 0;
       width: 1920px;
       height: 1080px;
-      overflow: hidden;
       background: transparent;
+      overflow: hidden;
+
+      /* Fix OBS scaling issues */
+      transform: scale(1);
+      transform-origin: top left;
     }
 
-    .overlay-frame {
+    .overlay-border {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      box-sizing: border-box;
-      border: 6px solid #ff0040;
+      border: 4px solid #ff0040;
+      box-shadow: 0 0 18px #ff0040, inset 0 0 8px #ff0040;
       border-radius: 12px;
-      box-shadow:
-        0 0 12px #ff0040,
-        0 0 24px #ff0040,
-        inset 0 0 6px #ff0040;
-      position: relative;
-      background: transparent;
+      pointer-events: none;
     }
 
-    .streamer-tag {
+    .name-tag {
       position: absolute;
-      top: 16px;
-      right: 24px;
+      top: 25px;
+      right: 40px;
       font-family: 'Orbitron', sans-serif;
-      font-size: 20px;
-      font-weight: 700;
+      font-size: 24px;
+      font-weight: bold;
       color: #ffffff;
-      background: rgba(0, 0, 0, 0.4);
-      padding: 4px 12px;
+      padding: 6px 14px;
+      border: 2px solid #ff0040;
       border-radius: 8px;
-      text-shadow:
-        0 0 2px #fff,
-        0 0 6px #ff0040,
-        0 0 10px #ff0040;
-      border: 1px solid #ff0040;
-      box-shadow:
-        0 0 6px #ff0040,
-        inset 0 0 4px #ff0040;
+      background-color: rgba(0, 0, 0, 0.6);
+      text-shadow: 0 0 4px #fff, 0 0 8px #ff0040;
+      box-shadow: 0 0 10px #ff0040, inset 0 0 4px #ff0040;
+      pointer-events: none;
     }
   </style>
 </head>
 <body>
-  <div class="overlay-frame">
-    <div class="streamer-tag">JustCallMeSilentTTV</div>
-  </div>
+  <div class="overlay-border"></div>
+  <div class="name-tag">JustCallMeSilentTTV</div>
 </body>
 </html>
